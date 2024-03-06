@@ -135,17 +135,17 @@ class ListaEnlazada:
 
                     #seleccion_patron.dato.mov_patron(new_patron)
 
-                    print("\nPatrón actualizado:")
+                    print("\n================ Patrón actualizado ========================")
                     print("Patron: ", seleccion_patron.dato.patron)
                     print("Cambios realizados: ", seleccion_patron.dato.cambio)
                     print("Movimientos realizados: ", cambiopos)
                     print("Precio por mover azulejo: Q", cambiopos * seleccion_patron.dato.S)
                     print("Pecio por cambiar azulejo: Q", seleccion_patron.dato.cambio * seleccion_patron.dato.F)
                     if cambiopos * seleccion_patron.dato.S < seleccion_patron.dato.cambio * seleccion_patron.dato.F:
-                        print("\n======== Sugerencia ==========")
+                        print("\n================== Sugerencia ========================")
                         print("El mejor precio a escoger es el de mover azulejo: Q", cambiopos * seleccion_patron.dato.S)
                     elif cambiopos * seleccion_patron.dato.S > seleccion_patron.dato.cambio * seleccion_patron.dato.F:
-                        print("\n======== Sugerencia ==========")
+                        print("\n================== Sugerencia ========================")
                         print("El mejor precio a escoger es el de cambiar azulejo: Q", seleccion_patron.dato.cambio * seleccion_patron.dato.F)
         else:
             print("Patron no encontrado")
@@ -175,6 +175,7 @@ class Patrones:
                             patron_instance = Patron(nombre, R, C, F, S, codigo, patron)
 
                             lista_enlazada.agregar(patron_instance)
+                    print("\n Documento almacenado correctamente.")
 
     def mostrar_patrones(self):
         print("\n======================  Tipo de Orden ===================")
@@ -191,6 +192,7 @@ class Patrones:
         
     
     def seleccionar_patrones(self):
+        print("\n=============== Modificar un patron ====================")
         codigo = input("\nIngrese el codigo a editar: ")
         lista_enlazada.seleccionar_editar(codigo)
 
